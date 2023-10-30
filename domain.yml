@@ -1,0 +1,75 @@
+version: "3.1"
+
+intents:
+  - cumprimento
+  - despedida
+  - confirmacao
+  - negacao
+  - marcar_consulta
+  - consultar_consulta
+  - bot_resposta
+  - informar_data
+  - informar_hora
+  - informar_paciente
+  - informar_medico
+
+
+entities:
+  - data
+  - hora
+  - paciente
+  - medico
+
+slots:
+  data:
+    type: text
+    mappings:
+      - type: from_entity
+        entity: data
+  hora:
+    type: text
+    mappings:
+      - type: from_entity
+        entity: hora
+
+  medico:
+    type: text
+    mappings:
+      - type: from_entity
+        entity: medico
+        
+  paciente:
+    type: text
+    mappings:
+      - type: from_entity
+        entity: paciente
+
+actions:
+  - action_marcar_visita_ao_medico
+  - action_consultar_visitas_ao_medico
+
+responses:
+  utter_cumprimento:
+    - text: "Olá,seja bem vindo! Deseja marcar uma consulta ou consultar exames?"
+
+  utter_data:
+    - text: "Digite a data(DD/MM/AAAA):"
+
+  utter_hora:
+    - text: "Digite a hora(HH:MM):"
+
+  utter_paciente:
+    - text: "Digite o nome do paciente:"
+
+  utter_medico:
+    - text: "Digite o nome do médico:"
+
+  utter_despedida:
+    - text: "Até mais. Agradeçemos pela preferência!"
+
+  utter_souumrobo:
+    - text: "Sou um robô, desenvolvido pela RASA."
+
+session_config:
+  session_expiration_time: 60
+  carry_over_slots_to_new_session: true

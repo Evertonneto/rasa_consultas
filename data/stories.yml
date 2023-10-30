@@ -1,0 +1,31 @@
+version: "3.1"
+
+# stories:
+#   - story: exchange path
+#     steps:
+#       - slot
+#       - action: action_get_exchange_rate
+
+stories:
+  - story: marcar consulta
+    steps:
+      - intent: cumprimento
+      - action: utter_cumprimento
+      - intent: marcar_consulta
+      - action: utter_data
+      - intent: informar_data
+        entities:
+          - data: "12/12/2023"
+      - action: utter_hora
+      - intent: informar_hora
+        entities:
+          - hora: "14:00"
+      - action: utter_paciente
+      - intent: informar_paciente
+        entities:
+          - paciente: "Guilherme"
+      - action: utter_medico
+      - intent: informar_medico
+        entities:
+          - medico: "Dr.Carlos"
+      - action: action_marcar_visita_ao_medico

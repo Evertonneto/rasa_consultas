@@ -1,0 +1,87 @@
+version: "3.1"
+
+nlu:
+  - intent: marcar_consulta
+    examples: |
+      - marcar consulta
+      - agendar consulta
+      - desejo marcar uma consulta
+      - desejo agendar uma consulta
+
+  - intent: consultar_consulta
+    examples: |
+      - ver minhas consultas
+      - visualizar consultar
+      - desejo consultar minhas consultas
+      - consultar minhas consultas
+
+  - intent: informar_data
+    examples: |
+      - [12/12/2023](data)
+      - [05/08/2024](data)
+      - [10/09/2025](data)
+      - A consulta será no dia [12/12/2023](data)
+      - Gostaria de marcar uma consulta para o dia [12/12/2023](data)
+
+  - intent: informar_hora
+    examples: |
+      - [14:00](hora)
+      - [16:00](hora)
+      - [18:00](hora)
+      - A consulta será às [14:00](hora)
+      - Gostaria de marcar uma consulta para as [14:00](hora)
+
+  - intent: informar_paciente
+    examples: |
+      - [Guilherme](paciente)
+      - [José](paciente)
+      - [Diego](paciente)
+      - O paciente é [Guilherme](paciente)
+      - Gostaria de marcar uma consulta para [Guilherme](paciente)
+
+  - intent: informar_medico
+    examples: |
+      - [Dr.Carlos](medico)
+      - [Dr.Alexandre](medico)
+      - [Dr.Rafael](medico)
+      - O médico é [Dr.Carlos](medico)
+      - Gostaria de marcar uma consulta com o [Dr.Carlos](medico)
+
+  - intent: cumprimento
+    examples: |
+      - oi 
+      - ola
+      - alo
+      - pode me ajudar
+
+  - intent: despedida
+    examples: |
+      - até mais
+      - tchau
+      - xau
+      - até logo
+      - até uma proxima
+      - obrigado, até mais
+
+  - intent: confirmacao
+    examples: |
+      - sim
+      - s
+      - com certeza
+      - com ctz
+      - isso
+
+  - intent: negacao
+    examples: |
+      - não 
+      - nao
+      - n
+      - sem chance
+      - não, obrigado
+
+  - intent: bot_resposta
+    examples: |
+      - Você é um robô?
+      - Você é um humano?
+      - Estou falando com um robô?
+      - Estou falando com um humano?
